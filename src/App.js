@@ -12,7 +12,7 @@ class App extends Component {
 
 
       isLoggedIn: false,
-      showEdit: false
+
     }
   }
 
