@@ -19,6 +19,7 @@ class App extends Component {
     const state = this.state;
     state.username = username;
     state.isLoggedIn = true;
+    console.log(state.username)
     this.setState(state);
   }
 

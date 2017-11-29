@@ -13,7 +13,7 @@ class Login extends Component {
 		return (
 			<div>
 				<h5>Login</h5>
-				<input type="text" onKeyPress={this.login}/>
+				Login:<input type="text" onKeyPress={this.login}/>
 			</div>
 		)
 	}
