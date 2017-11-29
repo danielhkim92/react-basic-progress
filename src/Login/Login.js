@@ -11,9 +11,11 @@ class Login extends Component {
 	}
 	render() {
 		return (
-			<div className='row'>
-				<h1>Login Page</h1>
-				Login:<input type="text" onKeyPress={this.login}/>
+			<div className='row center-align'>
+				<div className='col s6 center-align'>
+					<h1>Login Page</h1>
+					Login:<input type="text" onKeyPress={this.login}/>
+				</div>
 			</div>
 		)
 	}
