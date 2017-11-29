@@ -19,7 +19,14 @@ class Homepage extends Component {
   						</div>				
   						This is only the beginning baby
 					</li>
-					<li>Test2
+					<li>  
+						<div class="switch">
+    						<label>Not Completed
+    							<input type="checkbox"/>
+    								<span class="lever"></span>
+    						Completed</label>
+  						</div>				
+  						This is only the second STEP
 					</li>
 				</ol>
 			</div>
