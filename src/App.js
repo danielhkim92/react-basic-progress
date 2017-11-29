@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { Button, Card, Row, Col } from 'react-materialize';
 import Login from './Login/Login.js';
+import Homepage from './Homepage/Homepage.js';
 
 
 
@@ -29,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        {this.state.isLoggedIn ? <h1>Hello this is my app</h1>  : <Login login={this.login}/>}
+        {this.state.isLoggedIn ? <Homepage/>  : <Login login={this.login}/>}
 
       
       </div>
