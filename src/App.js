@@ -23,14 +23,7 @@ class App extends Component {
     this.setState(state);
   }
 
-  deleteItem = (movie) => {
-    console.log(movie);
-    const state = this.state;
-    const index = state.movies.indexOf(movie);
-    state.movies.splice(index, 1); 
-    this.setState(state);
 
-  }
 
   showEdit = (editedMovie) => {
     const state = this.state;
