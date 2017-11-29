@@ -38,3 +38,5 @@ export default class SimpleMapPage extends Component {
     );
   }
 }
+
+export default GoogleMap
