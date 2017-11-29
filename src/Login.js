@@ -11,7 +11,7 @@ class Login extends Component {
 	}
 	render() {
 		return (
-			<div>
+			<div className='row'>
 				<h1>Login Page</h1>
 				Login:<input type="text" onKeyPress={this.login}/>
 			</div>

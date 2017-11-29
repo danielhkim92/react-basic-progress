@@ -28,7 +28,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         {this.state.isLoggedIn ? <h1>Hello this is my app</h1>  : <Login login={this.login}/>}
 
       
