@@ -17,7 +17,7 @@ class Homepage extends Component {
     								<span class="lever"></span>
     						Completed</label>
   						</div>				
-  						
+  						This is only the beginning baby
 					</li>
 					<li>Test2
 					</li>
