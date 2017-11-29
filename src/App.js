@@ -28,8 +28,7 @@ class App extends Component {
   render() {
     return (
       <div>
-              {this.state.isLoggedIn ? <h1>Hello this is my app</h1>  : <Login login={this.login}/>
-        }
+        {this.state.isLoggedIn ? <h1>Hello this is my app</h1>  : <Login login={this.login}/>}
 
       
       </div>
