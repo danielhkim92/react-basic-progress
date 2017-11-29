@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Button, Card, Row, Col } from 'react-materialize';
 import Login from './Login/Login.js';
-import Homepage from './Homepage/Homepage.js';
+import Homepage from './HomePage/Homepage.js';
 
 
 
