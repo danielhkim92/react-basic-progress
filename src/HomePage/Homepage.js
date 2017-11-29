@@ -9,6 +9,19 @@ class Homepage extends Component {
 			<div className='row'>
 				<h1>Home Page</h1>
 				<h3>lorem</h3>
+				<ol>
+					<li>  
+						<div class="switch">
+    						<label>Not Completed
+    							<input type="checkbox"/>
+    								<span class="lever"></span>
+    						Completed</label>
+  						</div>				
+  						
+					</li>
+					<li>Test2
+					</li>
+				</ol>
 			</div>
 		)
 	}
