@@ -24,15 +24,7 @@ class App extends Component {
   }
 
 
-  editMovie = (movie) => {
-    const index = this.state.movies.indexOf(this.state.editedItem);
-    const state = this.state;
-    state.movies[index] = movie;
-    state.showEdit = !state.showEdit
-    this.setState(state);
-    //which movie is being edited, the movie we are changing into
-    console.log(movie)
-  }
+
   render() {
     return (
       <div>
