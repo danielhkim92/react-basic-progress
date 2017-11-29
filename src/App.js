@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       username: "",
 
-      editedItem: '',
+
       isLoggedIn: false,
       showEdit: false
     }
