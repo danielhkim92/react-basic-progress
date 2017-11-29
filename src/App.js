@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
       username: "",
-      movies: ['Up' ,'Finding Nemo', 'Heavyweights', 'Alladin'],
+
       editedItem: '',
       isLoggedIn: false,
       showEdit: false
