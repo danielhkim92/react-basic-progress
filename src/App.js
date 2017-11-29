@@ -24,14 +24,6 @@ class App extends Component {
   }
 
 
-
-  showEdit = (editedMovie) => {
-    const state = this.state;
-     
-    state.editedItem = editedMovie;
-    this.setState(state);
-  }
-
   editMovie = (movie) => {
     const index = this.state.movies.indexOf(this.state.editedItem);
     const state = this.state;
