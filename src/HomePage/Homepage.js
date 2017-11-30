@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Progress from './Progress.js';
+
 
 
 class Homepage extends Component {
