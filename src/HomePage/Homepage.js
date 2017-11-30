@@ -8,6 +8,9 @@ class Homepage extends Component {
 		return (
 			<div className='row'>
 				<h1>Home Page</h1>
+				  <div class="progress">
+     					 <div class="determinate" style="width: 70%"></div>
+  					</div>
 				<h3>lorem</h3>
 				<ol>
 					<li>  
