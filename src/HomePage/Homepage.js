@@ -8,7 +8,7 @@ class Homepage extends Component {
 	render() {
 		return (
 			<div className='row'>
-			<Progress/>
+		
 				<h1>Home Page</h1>
 				
 				<h3>lorem</h3>
