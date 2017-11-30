@@ -10,29 +10,56 @@ class Homepage extends Component {
 			<div className='row'>
 		
 				<h1>Home Page</h1>
-				
-				<h3>lorem</h3>
 				<ol>
-					<li>  
+				<li>  
 						<div className="switch">
     						<label>Not Completed
     							<input type="checkbox"/>
     								<span className="lever"></span>
     						Completed</label>
-  						</div>				
-  						This is only the beginning baby
-					</li>
-					<li>  
+  						</div>	
+
+
+				      <div className="row">
+        <div className="col s12 m6">
+          <div className="card blue-grey darken-1">
+            <div className="card-content white-text">
+              <span className="card-title">The First Step</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div className="card-action">
+              <a href="#">This is a link</a>
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+			</li>	
+				<li>  
 						<div className="switch">
     						<label>Not Completed
     							<input type="checkbox"/>
     								<span className="lever"></span>
     						Completed</label>
-  						</div>				
-  						This is only the second STEP
-					</li>
-				</ol>
-			</div>
+  						</div>	
+
+
+				      <div className="row">
+        <div className="col s12 m6">
+          <div className="card blue-grey darken-1">
+            <div className="card-content white-text">
+              <span className="card-title">The Second Step</span>
+              <p>WHAT DO I NEED TO DO??????.</p>
+            </div>
+            <div className="card-action">
+              <a href="#">This is a link</a>
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+			</li>
 		)
 	}
 }
