@@ -4,6 +4,7 @@ import MakeGoal from "./MakeGoal"
 
 
 class Homepage extends Component {
+	
 
 
 	render() {
