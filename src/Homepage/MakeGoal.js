@@ -5,11 +5,8 @@ class MakeGoal extends Component {
     //super initializes the keyword this
     super();
     this.state = {
-      username: "",
-      movies: ['Up' ,'Finding Nemo', 'Heavyweights', 'Alladin'],
-      editedItem: '',
-      isLoggedIn: false,
-      showEdit: false
+    	goalTitle: "",
+    	goalSummary: ""
     }
   }
 	handleSubmit = (e) => {
@@ -20,8 +17,8 @@ class MakeGoal extends Component {
 			<div>
 				<h3>Create a Goal</h3>
 				<form>
-					<label>Goal Title</label><input type='text'></input>
-					<label>Summary of Goal</label><input type='text'></input>
+					<label>Goal Title</label><input type='text' value="goalTitle"></input>
+					<label>Summary of Goal</label><input type='text' value="goalSummary"></input>
 					<button onClick={this.handleSubmit} className="waves-effect waves-light btn">Create Goal</button>
 				</form>
 			</div>
