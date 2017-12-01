@@ -22,7 +22,7 @@ class Homepage extends Component {
 				    <div className="card-tabs">
 				      <ul className="tabs tabs-fixed-width">
 				        <li className="tab"><a href="#test4">Create Goal</a></li>
-				        <li className="tab"><a class="active" href="#test5">Goal 1</a></li>
+				        <li className="tab"><a className="active" href="#test5">Goal 1</a></li>
 				        <li className="tab"><a href="#test6">Goal 2</a></li>
 				      </ul>
 				    </div>
@@ -44,8 +44,8 @@ class Homepage extends Component {
               								I am convenient because I require little markup to use effectively.</p>
             						</div>
             							<div className="card-action">
-              								<a href="#">This is a link</a>
-              								<a href="#">This is a link</a>
+              								<a href="1">This is a link</a>
+              								<a href="2">This is a link</a>
             							</div>
           							</div>
         					</div>
@@ -66,8 +66,8 @@ class Homepage extends Component {
 							            		<p>WHAT DO I NEED TO DO??????.</p>
             							</div>
             							<div className="card-action">
-							            	<a href="#">This is a link</a>
-							            	<a href="#">This is a link</a>
+							            	<a href="3">This is a link</a>
+							            	<a href="4">This is a link</a>
             							</div>
           							</div>
         						</div>
