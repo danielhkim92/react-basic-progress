@@ -12,7 +12,7 @@ class Homepage extends Component {
 
 			<div className='row'>
 				<h1>Home Page</h1>
-				<MakeGoal/>
+			
 				  <div className="card">
 				    <div className="card-content">
 				      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
@@ -70,7 +70,7 @@ class Homepage extends Component {
         						</div>
       						</div>
 						</div>
-      <div id="test6">Ideally we should add more stuff</div>
+      <div id="test6"><MakeGoal/></div>
     </div>
   </div>
 				
