@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MakeGoal from "./MakeGoal"
 
 
 
@@ -7,8 +8,11 @@ class Homepage extends Component {
 
 	render() {
 		return (
+
 			<div className='row'>
+
 				<h1>Home Page</h1>
+				<MakeGoal/>
 					<ol>
 						<li>  
 							<div className="switch">
