@@ -19,13 +19,14 @@ class Homepage extends Component {
 				    </div>
 				    <div className="card-tabs">
 				      <ul className="tabs tabs-fixed-width">
-				        <li className="tab"><a href="#test4">Test 1</a></li>
-				        <li className="tab"><a class="active" href="#test5">Test 2</a></li>
-				        <li className="tab"><a href="#test6">Test 3</a></li>
+				        <li className="tab"><a href="#test4">Create Goal</a></li>
+				        <li className="tab"><a class="active" href="#test5">Goal 1</a></li>
+				        <li className="tab"><a href="#test6">Goal 2</a></li>
 				      </ul>
 				    </div>
+				    <div id="test4"><MakeGoal/></div>
 				    <div className="card-content grey lighten-4">
-				    	<div id="test4">					 
+				    	<div id="test5">					 
 							<div className="switch">
     							<label>Not Completed
     								<input type="checkbox"/>
@@ -48,7 +49,7 @@ class Homepage extends Component {
         					</div>
       					</div>
 						</div>
-     				 	<div id="test5">
+     				 	<div id="test6">
 							<div className="switch">
     							<label>Not Completed
 	    							<input type="checkbox"/>
@@ -70,7 +71,7 @@ class Homepage extends Component {
         						</div>
       						</div>
 						</div>
-      <div id="test6"><MakeGoal/></div>
+      
     </div>
   </div>
 				
