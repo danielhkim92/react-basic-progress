@@ -26,13 +26,7 @@ class Homepage extends Component {
       </ul>
     </div>
     <div className="card-content grey lighten-4">
-      <div id="test4">Test 1</div>
-      <div id="test5">Test 2</div>
-      <div id="test6">Test 3</div>
-    </div>
-  </div>
-					<ol>
-						<li>  
+      <div id="test4">					 
 							<div className="switch">
     							<label>Not Completed
     								<input type="checkbox"/>
@@ -54,8 +48,8 @@ class Homepage extends Component {
           							</div>
         					</div>
       					</div>
-						</li>	
-						<li>  
+						</div>
+      <div id="test5"><li>  
 							<div className="switch">
     							<label>Not Completed
     							<input type="checkbox"/>
@@ -76,8 +70,13 @@ class Homepage extends Component {
           							</div>
         						</div>
       						</div>
-						</li>
-					</ol>
+						</li></div>
+      <div id="test6">Test 3</div>
+    </div>
+  </div>
+				
+						
+				
 			</div>
 		)
 	}
