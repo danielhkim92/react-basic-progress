@@ -10,18 +10,15 @@ class MakeGoal extends Component {
     }
   }
 	handleSubmit = (e) => {
-		state =  this.state;
-		state.goalTitle = e.currentTarget.title;
-		this.setState(state);
-		console.log(state);
+		console.log('you submitted something')
 	}
 	render() {
 		return (
 			<div>
 				<h3>Create a Goal</h3>
 				<form>
-					<label>Goal Title</label><input type='text' name="title"></input>
-					<label>Summary of Goal</label><input type='text' name="summary"></input>
+					<label>Goal Title</label><input type='text'></input>
+					<label>Summary of Goal</label><input type='text'></input>
 					<button onClick={this.handleSubmit} className="waves-effect waves-light btn">Create Goal</button>
 				</form>
 			</div>
