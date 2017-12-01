@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 
 class MakeGoal extends Component {
+	constructor(){
+    //super initializes the keyword this
+    super();
+    this.state = {
+      username: "",
+      movies: ['Up' ,'Finding Nemo', 'Heavyweights', 'Alladin'],
+      editedItem: '',
+      isLoggedIn: false,
+      showEdit: false
+    }
+  }
 	handleSubmit = (e) => {
 		console.log('hello')
 	}
@@ -11,7 +22,7 @@ class MakeGoal extends Component {
 				<form>
 					<label>Goal Title</label><input type='text'></input>
 					<label>Summary of Goal</label><input type='text'></input>
-					<button onKeyPress={this.handleSubmit} className="waves-effect waves-light btn">Create Goal</button>
+					<button onClick={this.handleSubmit} className="waves-effect waves-light btn">Create Goal</button>
 				</form>
 			</div>
 	)}
