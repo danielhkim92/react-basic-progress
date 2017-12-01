@@ -4,7 +4,9 @@ import MakeGoal from "./MakeGoal"
 
 
 class Homepage extends Component {
-	
+	toggleLine = (e) => {
+		console.log("hi you doing this")
+	}
 
 
 	render() {
@@ -29,7 +31,7 @@ class Homepage extends Component {
 				    	<div id="test5">					 
 							<div className="switch">
     							<label>Not Completed
-    								<input type="checkbox"/>
+    								<input onClick={this.toggleLine} type="checkbox"/>
     								<span className="lever"></span>
     								Completed</label>
   							</div>	
@@ -38,7 +40,7 @@ class Homepage extends Component {
           						<div className="card blue-grey darken-1">
             						<div className="card-content white-text">
               							<span className="card-title">The First Step</span>
-              								<p>I am a very simple card. I am good at containing small bits of information.
+              								<p className="strikethrough">I am a very simple card. I am good at containing small bits of information.
               								I am convenient because I require little markup to use effectively.</p>
             						</div>
             							<div className="card-action">
