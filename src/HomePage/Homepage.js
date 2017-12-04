@@ -8,7 +8,8 @@ class Homepage extends Component {
 	constructor(){
 		super()
 		this.state = {
-			goals: [{}],
+			goals: [{goalTitles: "animals", goalSummaries: "THIS IS ONLY THE BEGINNING"}, 
+			{goalTitles: "dragons", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}],
 
 		}
 	}
@@ -25,7 +26,8 @@ class Homepage extends Component {
 		const state = this.state;
 		state.steps = step;
 		state.description = description;
-		this.setState(state);
+		this.setState(state)
+
 
 	}
 
@@ -35,7 +37,7 @@ class Homepage extends Component {
 		const goalTitle = this.state.goals.map((x, i) => {
 			return <li key={i} className="tab"><a href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
 		const goalSummary = this.state.goals.map((x, i)=> {
-			return <div className="center-align" key={i} id={x.goalTitles}><h4>{x.goalSummaries}</h4><GoalForm grabbingSteps={this.grabbingSteps}/></div>
+			return <div className="center-align" key={i} id={`${x.goalTitles}`}><h4>{x.goalSummaries}</h4><GoalForm grabbingSteps={this.grabbingSteps}/></div>
 		})
 		return (
 			<div className='row'>
