@@ -7,7 +7,8 @@ class Homepage extends Component {
 	constructor(){
 		super()
 		this.state = {
-			goals: [{goalTitles: "animals", goalSummaries: "great"}, {goalTitles: "dragons", goalSummaries: "great"}],
+			goals: [{goalTitles: "animals", goalSummaries: "THIS IS ONLY THE BEGINNING"}, 
+			{goalTitles: "dragons", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}],
 
 		}
 	}
@@ -27,7 +28,7 @@ class Homepage extends Component {
 		const goalTitle = this.state.goals.map((x, i) => {
 			return <li key={i} className="tab"><a href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
 		const goalSummary = this.state.goals.map((x, i)=> {
-			return <div key={i} id={x.goalTitles}>{x.goalSummary}</div>
+			return <div key={i} id={x.goalTitles}>{x.goalSummaries}</div>
 		})
 		return (
 			<div className='row'>
@@ -40,11 +41,11 @@ class Homepage extends Component {
 				      <ul className="tabs tabs-fixed-width">
 				        <li className="tab"><a href="#test4">Create Goal</a></li>
 				        {goalTitle}
-				     	<li className="tab"><a href='#test5'>Goal 1</a></li>
+				     	
 				      </ul>
 				    </div>
 				    <div id="test4"><MakeGoal grabbingGoals={this.grabbingGoals}/></div>
-				    <div id="test5">OMG THIS IS GOING TO BE A GOAL</div>
+				    {goalSummary}
 
 				</div>
   			</div>
