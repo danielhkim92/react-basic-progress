@@ -7,13 +7,18 @@ class Homepage extends Component {
 	constructor(){
 		super()
 		this.state = {
-			goals: [{}],
+			goals: [{goalTitles: "", goalSummaries: ""}],
 
 		}
 	}
 	
 	grabbingGoals = (goalTitle, goalSummary) => {
-		console.log(goalTitle, goalSummary)
+
+		const state =  this.state;
+		state.goals.goalTitles = goalTitle;
+		state.goals.goalSummaries = goalSummary;
+		console.log(state.goals)
+
 	}
 
 
@@ -30,8 +35,6 @@ class Homepage extends Component {
 				    <div className="card-tabs">
 				      <ul className="tabs tabs-fixed-width">
 				        <li className="tab"><a href="#test4">Create Goal</a></li>
-				        <li className="tab"><a href="#test5">Goal 1</a></li>
-				        <li className="tab"><a href="#test6">Goal 2</a></li>
 				      </ul>
 				    </div>
 				    <div id="test4"><MakeGoal grabbingGoals={this.grabbingGoals}/></div>
