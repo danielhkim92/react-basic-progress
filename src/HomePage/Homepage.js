@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import MakeGoal from "./MakeGoal"
+import MakeGoal from "./MakeGoal";
+import GoalForm from "./GoalForm";
 
 
 
@@ -28,7 +29,7 @@ class Homepage extends Component {
 		const goalTitle = this.state.goals.map((x, i) => {
 			return <li key={i} className="tab"><a href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
 		const goalSummary = this.state.goals.map((x, i)=> {
-			return <div key={i} id={x.goalTitles}>{x.goalSummaries}</div>
+			return <div key={i} id={x.goalTitles}>{x.goalSummaries}<GoalForm/></div>
 		})
 		return (
 			<div className='row'>
