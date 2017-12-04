@@ -12,6 +12,9 @@ class Homepage extends Component {
 		}
 	}
 	
+	grabbingGoals = (goalTitle, goalSummary) => {
+		console.log(goalTitle, goalSummary)
+	}
 
 
 
@@ -31,7 +34,7 @@ class Homepage extends Component {
 				        <li className="tab"><a href="#test6">Goal 2</a></li>
 				      </ul>
 				    </div>
-				    <div id="test4"><MakeGoal/></div>
+				    <div id="test4"><MakeGoal grabbingGoals={this.grabbingGoals}/></div>
 				    <div id="test5">OMG THIS IS GOING TO BE A GOAL</div>
 				</div>
   			</div>
