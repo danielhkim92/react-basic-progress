@@ -21,6 +21,7 @@ class GoalForm extends Component {
   	}
 
 	handleSubmit = (e) => {
+		this.props.grabbingSteps(this.state.step, this.state.description);
 		console.log('the first step has been submitted', this.state)
 	}
 	render(){

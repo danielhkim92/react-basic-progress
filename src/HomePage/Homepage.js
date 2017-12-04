@@ -23,6 +23,8 @@ class Homepage extends Component {
 	}
 
 	grabbingSteps = (step, description) => {
+		const state = this.state;
+
 
 	}
 
@@ -32,7 +34,7 @@ class Homepage extends Component {
 		const goalTitle = this.state.goals.map((x, i) => {
 			return <li key={i} className="tab"><a href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
 		const goalSummary = this.state.goals.map((x, i)=> {
-			return <div key={i} id={x.goalTitles}>{x.goalSummaries}<GoalForm/></div>
+			return <div className="center-align" key={i} id={x.goalTitles}><h4>{x.goalSummaries}</h4><GoalForm grabbingSteps={this.grabbingSteps}/></div>
 		})
 		return (
 			<div className='row'>
