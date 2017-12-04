@@ -11,20 +11,26 @@ class GoalForm extends Component {
     this.handleDescription = this.handleDescription.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 	}
-  handleStep(event) {
-    this.setState({step: event.target.value});
-  }
 
-	handleDescription = (e) = {
-		this.setState(this.state.description: event.target.value)
-	}
+  	handleStep(event) {
+    this.setState({step: event.target.value});
+  	}
+
+ 	handleDescription(event) {
+    this.setState({description: event.target.value});
+  	}
 
 	handleSubmit = (e) => {
 		console.log('the first step has been submitted', this.state)
 	}
 	render(){
+	
 		return(
 			<div>
+			<h3>Steps to Finishing</h3>
+			<ul>
+
+			</ul>
 				<form onSubmit={this.handleSubmit}>
 					<label>Make the first step!:</label>
 					<input type='text' onChange={this.handleStep} placeholder="Enroll into General Assembly"/>

@@ -17,9 +17,12 @@ class Homepage extends Component {
 	grabbingGoals = (goalTitle, goalSummary) => {
 
 		const state =  this.state;
-
-		console.log(state.goals[0].goalTitles);
+		state.goals.push({goalTitles: goalTitle, goalSummaries: goalSummary})
 		this.setState(state);
+
+	}
+
+	grabbingSteps = (step, description) => {
 
 	}
 
