@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        {this.state.isLoggedIn ? <Homepage/>  : <Login login={this.login}/>}
+        <Homepage/> 
 
       
       </div>

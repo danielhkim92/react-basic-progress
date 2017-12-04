@@ -4,9 +4,15 @@ import MakeGoal from "./MakeGoal"
 
 
 class Homepage extends Component {
-	toggleLine = (e) => {
-		console.log("hi you doing this")
+	constructor(){
+		super()
+		this.state = {
+			goals: [{}],
+
+		}
 	}
+	
+
 
 
 	render() {
@@ -25,7 +31,8 @@ class Homepage extends Component {
 				        <li className="tab"><a href="#test6">Goal 2</a></li>
 				      </ul>
 				    </div>
-				    <div id="test4"><MakeGoal/></div>x
+				    <div id="test4"><MakeGoal/></div>
+				    <div id="test5">OMG THIS IS GOING TO BE A GOAL</div>
 				</div>
   			</div>
 		)
