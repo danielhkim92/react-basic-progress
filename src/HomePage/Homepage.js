@@ -8,8 +8,7 @@ class Homepage extends Component {
 	constructor(){
 		super()
 		this.state = {
-			goals: [{goalTitles: "animals", goalSummaries: "THIS IS ONLY THE BEGINNING"}, 
-			{goalTitles: "dragons", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}],
+			goals: [{}],
 
 		}
 	}
@@ -24,7 +23,9 @@ class Homepage extends Component {
 
 	grabbingSteps = (step, description) => {
 		const state = this.state;
-
+		state.steps = step;
+		state.description = description;
+		this.setState(state);
 
 	}
 
