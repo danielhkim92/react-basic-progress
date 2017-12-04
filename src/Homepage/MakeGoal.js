@@ -18,13 +18,14 @@ class MakeGoal extends Component {
   }
   handleSummary(event) {
     this.setState({goalSummary: event.target.value});
+    
   }
 
   handleSubmit(event) {
     console.log('A title was submitted: ' + this.state.goalTitle);
     console.log('A summarywas submitted: ' + this.state.goalSummary);
     this.props.grabbingGoals(this.state.goalTitle, this.state.goalSummary)
-    event.preventDefault();
+    
   }
 
   render() {
