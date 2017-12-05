@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MakeGoal from "./MakeGoal";
-import GoalForm from "./GoalForm";
 import Goalpage from "./Goalpage";
 
 
@@ -8,9 +7,10 @@ class Homepage extends Component {
 	constructor(){
 		super()
 		this.state = {
+			currentGoal: "",
 			goalPicked: false,
 			goals: [{goalTitles: "start", goalSummaries: "THIS IS ONLY THE BEGINNING"}, 
-			{goalTitles: "second Goal", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}]
+			{goalTitles: "second goal", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}]
 
 		}
 	}
@@ -34,6 +34,7 @@ class Homepage extends Component {
 		
 		const state = this.state;
 		state.currentGoal = e.target.innerText.toLowerCase();
+		this.setState(state);
 		console.log(state.currentGoal)
 	}
 
@@ -43,9 +44,7 @@ class Homepage extends Component {
 		const goalTitle = this.state.goals.map((x, i) => {
 			return <li onClick={this.showSteps} key={i} className="tab"><a href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
 
-		// const goalSummary = this.state.goals.map((x, i)=> {
-		// 	return <div className="center-align" id={`${x.goalTitles}`}><h4>{x.goalSummaries}</h4><GoalForm grabbingSteps={this.grabbingSteps}/></div>
-		// })
+
 		return (
 			<div className='row'>
 
@@ -63,6 +62,7 @@ class Homepage extends Component {
 				      </ul>
 				    </div>
 				</div>
+				<Goalpage currentGoal={this.state.currentGoal} goals={this.state.goals}/>
   			</div>
 
 
