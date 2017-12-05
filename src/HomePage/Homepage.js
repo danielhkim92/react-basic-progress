@@ -8,8 +8,9 @@ class Homepage extends Component {
 	constructor(){
 		super()
 		this.state = {
-			goals: [{goalTitles: "animals", goalSummaries: "THIS IS ONLY THE BEGINNING"}, 
-			{goalTitles: "dragons", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}]
+			goalPicked: false,
+			goals: [{goalTitles: "Start", goalSummaries: "THIS IS ONLY THE BEGINNING"}, 
+			{goalTitles: "Second Goal", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}]
 
 		}
 	}
@@ -38,26 +39,24 @@ class Homepage extends Component {
 			return <li key={i} className="tab"><a href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
 
 		const goalSummary = this.state.goals.map((x, i)=> {
-			return <div className="center-align" key={i} id={`${x.goalTitles}`}><h4>{x.goalSummaries}</h4><GoalForm grabbingSteps={this.grabbingSteps}/></div>
+			return <div className="center-align" id={`${x.goalTitles}`}><h4>{x.goalSummaries}</h4><GoalForm grabbingSteps={this.grabbingSteps}/></div>
 		})
 		return (
 			<div className='row'>
+
 			<h1>Home Page</h1>
+		
 				<div className="card">
 				    <div className="card-content">
-				      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+		<MakeGoal grabbingGoals={this.grabbingGoals}/>
 				    </div>
 				    <div className="card-tabs">
 				      <ul className="tabs tabs-fixed-width">
-				        <li className="tab"><a href="#create">Create Goal</a></li>
+				        
 				        {goalTitle}
 				     	
 				      </ul>
 				    </div>
-				    <div id="create"><MakeGoal grabbingGoals={this.grabbingGoals}/></div>
-				    	{goalSummary}
-				  	
-
 				</div>
   			</div>
 
