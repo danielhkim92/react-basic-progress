@@ -23,14 +23,7 @@ class Goalpage extends Component {
 		const bam = this.props.currentGoal
 		const stepsToCompletion = this.state.steps.map((x, i) => {
 			return <div key={i}>
-						<div className="switch">
-						 	<label>
-						      	Not Finished
-						      	<input type="checkbox"/>
-						      	<span className="lever"></span>
-						      	Finished
-						    </label>
-						</div>
+
 						<li>{x.step}</li>
 						<p>{x.description}</p>
 					</div>
@@ -51,6 +44,14 @@ class Goalpage extends Component {
 		return(
 			<div>
 				<h3>This is the {this.props.currentGoal.toUpperCase()} Page</h3>
+					<div className="switch">
+						<label>
+						    Not Finished
+						    <input type="checkbox"/>
+						    <span className="lever"></span>
+						    Finished
+						</label>
+					</div>
 				<ul>
 				{stepsToCompletion}
 				</ul>
