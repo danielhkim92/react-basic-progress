@@ -3,6 +3,7 @@ import MakeGoal from "./MakeGoal";
 import Goalpage from "./Goalpage";
 
 
+
 class Homepage extends Component {
 	constructor(){
 		super()
@@ -43,6 +44,7 @@ class Homepage extends Component {
 
 
 	render() {
+	
 
 		const goalTitle = this.state.goals.map((x, i) => {
 			return <li onClick={this.showSteps} key={i} className="tab"><a onClick={this.showGoal} href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})

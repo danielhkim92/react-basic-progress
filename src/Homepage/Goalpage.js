@@ -5,7 +5,8 @@ class Goalpage extends Component {
 	constructor(props){
 		super();
 		this.state = {
-			steps: []
+			steps: [],
+			isStrikeThrough: false
 			
 
 		}
@@ -18,13 +19,26 @@ class Goalpage extends Component {
 		this.setState(state)
 		console.log(state.steps)
 	}
+
+	toggle = (e) => {
+		this.setState({isStrikeThrough: !this.state.isStrikeThrough})
+		console.log(this.state.isStrikeThrough)
+		if(this.state.isStrikeThrough === true){
+			console.log('its TRUE baby')
+		}
+	}
 	render(){
-		const goals = this.props.goals;
-		const bam = this.props.currentGoal
+		const style = {
+		  	textDecoration: 'line-through'
+
+  		};
+
 		const stepsToCompletion = this.state.steps.map((x, i) => {
 			return <div key={i}>
 						<li>{x.step}</li>
-						<label>Description</label><p>{x.description}</p>
+							<ol>
+							<li>{x.description}</li>
+							</ol>
 						<div className="switch">
 						<label>
 						    Not Finished
@@ -45,16 +59,17 @@ class Goalpage extends Component {
 
 		return(
 			<div>
-				<h3>This is the {this.props.currentGoal.toUpperCase()} Page</h3>
 					<div className="switch">
 						<label>
 						    Not Finished
-						    <input type="checkbox"/>
+						    <input onClick={this.toggle} type="checkbox"/>
 						    <span className="lever"></span>
 						    Finished
 						</label>
 					</div>
-				<ol>
+				<h3>This is the {this.props.currentGoal.toUpperCase()} Page</h3>
+					
+				<ol type="I">
 				{stepsToCompletion}
 				</ol>
 				<GoalForm grabbingSteps={this.grabbingSteps}/>

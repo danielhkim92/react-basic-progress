@@ -30,9 +30,9 @@ class GoalForm extends Component {
 			<div>
 			<h3>Steps to Finishing</h3>
 				<form onSubmit={this.handleSubmit}>
-					<label>Make the first step!:</label>
+					<label>Make A Step:</label>
 					<input type='text' onChange={this.handleStep} placeholder="Enroll into General Assembly"/>
-					<label>Description of first step!:</label>
+					<label>Description of Step!:</label>
 					<input type ='text' onChange={this.handleDescription} placeholder="Figure out how can I afford this??"/>
 					<input type='submit' value='Submit'/>
 				</form>
