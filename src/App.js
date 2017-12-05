@@ -29,7 +29,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className='container strike'>
         {this.state.isLoggedIn ? <Homepage/>  : <Login login={this.login}/>}
 
       
