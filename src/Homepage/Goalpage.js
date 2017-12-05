@@ -23,20 +23,26 @@ class Goalpage extends Component {
 		const bam = this.props.currentGoal
 		const stepsToCompletion = this.state.steps.map((x, i) => {
 			return <div key={i}>
-					<ol>
+						<div className="switch">
+						 	<label>
+						      	Not Finished
+						      	<input type="checkbox"/>
+						      	<span className="lever"></span>
+						      	Finished
+						    </label>
+						</div>
 						<li>{x.step}</li>
-					<li>{x.description}</li>
-					</ol>
+						<p>{x.description}</p>
 					</div>
 
 		})
 
-		for(let i = 0; i < goals.length; i++){
-			if (goals[i].goalTitles === bam) {
-    			const summary = goals[i].Summaries;
+		// for(let i = 0; i < goals.length; i++){
+		// 	if (goals[i].goalTitles === bam) {
+  //   			const summary = goals[i].Summaries;
     			
-   			}
-		}
+  //  			}
+		// }
 		
 	
 
@@ -45,9 +51,9 @@ class Goalpage extends Component {
 		return(
 			<div>
 				<h3>This is the {this.props.currentGoal.toUpperCase()} Page</h3>
-				<ol>
+				<ul>
 				{stepsToCompletion}
-				</ol>
+				</ul>
 				<GoalForm grabbingSteps={this.grabbingSteps}/>
 
 			</div>
