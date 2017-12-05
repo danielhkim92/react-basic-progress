@@ -9,8 +9,8 @@ class Homepage extends Component {
 		super()
 		this.state = {
 			goalPicked: false,
-			goals: [{goalTitles: "Start", goalSummaries: "THIS IS ONLY THE BEGINNING"}, 
-			{goalTitles: "Second Goal", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}]
+			goals: [{goalTitles: "start", goalSummaries: "THIS IS ONLY THE BEGINNING"}, 
+			{goalTitles: "second Goal", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}]
 
 		}
 	}
@@ -28,27 +28,32 @@ class Homepage extends Component {
 		state.steps = step;
 		state.description = description;
 		this.setState(state)
+	}
 
-
+	showSteps = (e) => {
+		
+		const state = this.state;
+		state.currentGoal = e.target.innerText.toLowerCase();
+		console.log(state.currentGoal)
 	}
 
 
 
 	render() {
 		const goalTitle = this.state.goals.map((x, i) => {
-			return <li key={i} className="tab"><a href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
+			return <li onClick={this.showSteps} key={i} className="tab"><a href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
 
-		const goalSummary = this.state.goals.map((x, i)=> {
-			return <div className="center-align" id={`${x.goalTitles}`}><h4>{x.goalSummaries}</h4><GoalForm grabbingSteps={this.grabbingSteps}/></div>
-		})
+		// const goalSummary = this.state.goals.map((x, i)=> {
+		// 	return <div className="center-align" id={`${x.goalTitles}`}><h4>{x.goalSummaries}</h4><GoalForm grabbingSteps={this.grabbingSteps}/></div>
+		// })
 		return (
 			<div className='row'>
 
 			<h1>Home Page</h1>
-		
+			<MakeGoal grabbingGoals={this.grabbingGoals}/>
 				<div className="card">
 				    <div className="card-content">
-		<MakeGoal grabbingGoals={this.grabbingGoals}/>
+		
 				    </div>
 				    <div className="card-tabs">
 				      <ul className="tabs tabs-fixed-width">
