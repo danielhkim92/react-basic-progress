@@ -51,25 +51,24 @@ class Homepage extends Component {
 
 
 		return (
+			<div className="container">
 			<div className='row'>
-			<h1>Home Page</h1>
-			<MakeGoal grabbingGoals={this.grabbingGoals}/>
-				<div className="card">
-				    <div className="card-content">
-		
-				    </div>
-				    <div className="card-tabs">
-				      <ul className="tabs tabs-fixed-width">
-				        
-				        {goalTitle}
-				     	
-				      </ul>
-				    </div>
-				</div>
-				{this.state.goalPicked ? <Goalpage currentGoal={this.state.currentGoal} goals={this.state.goals}/> : <h1>Right now I'm false</h1>}
+				<MakeGoal grabbingGoals={this.grabbingGoals}/>
+					<div className="card blue-grey darken-1">
+						<div className="card-content white-text">
+				   			<div className="card-content">
+				   				<h3 className="center-align">Pick a Goal</h3>
+				   			</div>
+					   			<div className="card-tabs">
+					     				<ul className="tabs tabs-fixed-width">   
+					       				{goalTitle}   	
+					     				</ul>
+					   			</div>
+					   	</div>
+					</div>
+		{this.state.goalPicked ? <Goalpage currentGoal={this.state.currentGoal} goals={this.state.goals}/> : <h1>Right now I'm false</h1>}
   			</div>
-
-
+  			</div>
 		)
 	}
 }

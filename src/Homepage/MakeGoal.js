@@ -30,17 +30,20 @@ class MakeGoal extends Component {
 
   render() {
     return (
-    	<div>
-    		<h3>Create a Goal</h3>
-	      <form onSubmit={this.handleSubmit}>
-	        <label>Goal Title:</label>
-		        <input type="text" placeholder="For Example, Learn Spanish" 
-		        onChange={this.handleTitle} />
-	       <label>Summary of Goal:</label>
-	        	<input type='text' placeholder='Be proficient to visit Spain!' onChange={this.handleSummary}></input>
-	       		<input type="submit" value="Submit" />
-	      </form>
-      	</div>
+      <div className='row'>   
+            <div className="card blue-grey darken-1"> 
+              <h3 className="center-align white-text">Create a Goal</h3>
+                <div className="card-content white-text"> 		
+  	               <form onSubmit={this.handleSubmit}>
+    	               <label>Goal Title:</label>
+    		              <input type="text" placeholder="For Example, Learn Spanish" onChange={this.handleTitle} />
+    	               <label>Summary of Goal:</label>
+          	        	<input type='text' placeholder='Be proficient to visit Spain!' onChange={this.handleSummary}></input>
+          	       		<input className="black-text" type="submit" value="Submit" />
+                  </form>
+                </div>
+            </div> 
+        </div>
     );
   }
 }

@@ -27,15 +27,17 @@ class GoalForm extends Component {
 	render(){
 	
 		return(
-			<div>
-			<h3>Steps to Finishing</h3>
-				<form onSubmit={this.handleSubmit}>
+			<div className="container">
+			<div className="row col s12">
+			<h3 className="center-align">Steps to Finishing</h3>
+				<form className="center-align" onSubmit={this.handleSubmit}>
 					<label>Make A Step:</label>
 					<input type='text' onChange={this.handleStep} placeholder="Enroll into General Assembly"/>
 					<label>Description of Step!:</label>
 					<input type ='text' onChange={this.handleDescription} placeholder="Figure out how can I afford this??"/>
 					<input type='submit' value='Submit'/>
 				</form>
+			</div>
 			</div>
 			)
 	}

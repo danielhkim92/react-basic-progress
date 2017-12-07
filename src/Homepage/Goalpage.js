@@ -5,6 +5,7 @@ class Goalpage extends Component {
 	constructor(props){
 		super();
 		this.state = {
+			currentGoal: '',
 			steps: [],
 			isStrikeThrough: false
 			
@@ -14,11 +15,13 @@ class Goalpage extends Component {
 
 	grabbingSteps = (step, description) => {
 		const state = this.state;
+		state.currentGoal = this.props.currentGoal
 		state.steps.push({step: step, description: description})
-		state.description = description;
 		this.setState(state)
-		console.log(state.steps)
+		console.log(state)
 	}
+
+
 
 	toggle = (e) => {
 		this.setState({isStrikeThrough: !this.state.isStrikeThrough})
@@ -28,55 +31,65 @@ class Goalpage extends Component {
 		}
 	}
 	render(){
-		const style = {
-		  	textDecoration: 'line-through'
 
-  		};
+
+
 
 		const stepsToCompletion = this.state.steps.map((x, i) => {
-			return <div key={i}>
-						<li>{x.step}</li>
-							<ol>
-							<li>{x.description}</li>
-							</ol>
-						<div className="switch">
-						<label>
-						    Not Finished
-						    <input type="checkbox"/>
-						    <span className="lever"></span>
-						    Finished
-						</label>
-					</div>
-					</div>
-
+			if(this.state.currentGoal === this.props.currentGoal){
+				return <div key={i}>
+							<div className="card blue-grey darken-1 col s5">
+								<div className="card-content white-text">
+									<div className="switch center-align">
+										<label>
+										    Not Finished
+										    <input type="checkbox"/>
+										    <span className="lever"></span>
+										    Finished
+										</label>
+									</div>
+										<span className="card-title"><li className="center-align">{x.step}</li></span>
+											<ul>
+												<li className="center-align">{x.description}</li>
+											</ul>
+								</div>
+							</div>
+						</div>			
+				}else{
+					console.log('nada')
+				}
 		})
-
-
-		
-	
-
-		
-
 		return(
-			<div>
-					<div className="switch">
-						<label>
-						    Not Finished
-						    <input onClick={this.toggle} type="checkbox"/>
-						    <span className="lever"></span>
-						    Finished
-						</label>
+				<div>
+				
+				
+						<div className="row card blue-grey darken-1 white-text">
+							<div className="switch center-align">
+								<label>
+								    Not Finished
+								    <input onClick={this.toggle} type="checkbox"/>
+								    <span className="lever"></span>
+								    Finished
+								</label>
+							</div>
+								<h3 className="center-align">{this.props.currentGoal.toUpperCase()} Goal</h3>
+						</div>
+					<div className="row">
+						<ol type="I">
+							{stepsToCompletion}
+						</ol>
 					</div>
-				<h3>This is the {this.props.currentGoal.toUpperCase()} Page</h3>
-					
-				<ol type="I">
-				{stepsToCompletion}
-				</ol>
-				<GoalForm grabbingSteps={this.grabbingSteps}/>
-
-			</div>
-			)
+				<GoalForm className="row" grabbingSteps={this.grabbingSteps}/>
+			
+				</div>
+		)
 	}
 }
 
 export default Goalpage;
+
+
+
+					// const style = {
+		  	// 			textDecoration: 'line-through'
+  			// 		};
