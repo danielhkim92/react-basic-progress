@@ -28,7 +28,7 @@ class Goalpage extends Component {
 		this.setState({isStrikeThrough: !this.state.isStrikeThrough})
 		console.log(this.state.isStrikeThrough)
 		if(this.state.isStrikeThrough === true){
-			console.log('its TRUE baby')
+			return <strike/>
 		}
 	}
 	render(){
@@ -66,19 +66,16 @@ class Goalpage extends Component {
 		})
 		return(
 				<div>
-				
-				
-						<div className="row card blue-grey darken-1 white-text">
-
-							<div className="switch center-align">
-								<label>
-								    Not Finished
-								    <input onClick={this.toggle} type="checkbox"/>
-								    <span className="lever"></span>
-								    Finished
-								</label>
-							</div>
-								<h3 className="center-align">{this.props.currentGoal.toUpperCase()} Goal</h3>
+					<div className="row card blue-grey darken-1 white-text">
+						<div className="switch center-align">
+							<label>
+								Not Finished
+								<input onClick={this.toggle} type="checkbox"/>
+								<span className="lever"></span>
+								Finished
+							</label>
+						</div>
+								<h3 className="center-align">{this.props.currentGoal.toUpperCase()}</h3>
 						</div>
 					<div className="row">
 						<ol className="center-align" type="I">
