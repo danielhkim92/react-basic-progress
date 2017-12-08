@@ -11,7 +11,7 @@ class Homepage extends Component {
 			currentGoal: "",
 			goalPicked: false,
 			goals: [{goalTitles: "start", goalSummaries: "THIS IS ONLY THE BEGINNING"}, 
-			{goalTitles: "second goal", goalSummaries: "I CANT WAIT TO GET THIS WORKING!"}]
+			]
 
 		}
 	}

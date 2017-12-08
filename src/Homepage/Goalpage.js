@@ -17,7 +17,7 @@ class Goalpage extends Component {
 	grabbingSteps = (step, description) => {
 		const state = this.state;
 		state.currentGoal = this.props.currentGoal
-		state.steps.push({step: step, description: description})
+		state.steps.push({step: step, description: description, completed: false})
 		this.setState(state)
 		console.log(state)
 	}
@@ -35,11 +35,13 @@ class Goalpage extends Component {
 
 
 
-
 		const stepsToCompletion = this.state.steps.map((x, i) => {
+
+
 			if(this.state.currentGoal === this.props.currentGoal){
-				return <div key={i}>
-							<div className="card blue-grey darken-1 col s7">
+				return <div className="container" key={i}>
+					
+							<div className="card blue-grey darken-1">
 								<div className="card-content white-text">
 									<div className="switch center-align">
 										<label>
@@ -56,6 +58,7 @@ class Goalpage extends Component {
 										</ul>
 								</div>
 							</div>
+
 						</div>			
 				}else{
 					console.log('nada')
@@ -66,6 +69,7 @@ class Goalpage extends Component {
 				
 				
 						<div className="row card blue-grey darken-1 white-text">
+
 							<div className="switch center-align">
 								<label>
 								    Not Finished
@@ -77,12 +81,12 @@ class Goalpage extends Component {
 								<h3 className="center-align">{this.props.currentGoal.toUpperCase()} Goal</h3>
 						</div>
 					<div className="row">
-						<ol type="I">
+						<ol className="center-align" type="I">
 							{stepsToCompletion}
 						</ol>
 					</div>
 				<GoalForm className="row" grabbingSteps={this.grabbingSteps}/>
-			
+		
 				</div>
 		)
 	}
