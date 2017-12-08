@@ -55,7 +55,7 @@ class Homepage extends Component {
 			<div className='row'>
 				<MakeGoal grabbingGoals={this.grabbingGoals}/>
 					<div className="card blue-grey darken-1">
-						<div className="card-content white-text">
+						<div className="card-content white-text"><h3 className="center-align">Welcome {this.props.username}</h3>
 				   			<div className="card-content">
 				   				<h3 className="center-align">Pick a Goal</h3>
 				   			</div>
