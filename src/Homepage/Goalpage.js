@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import GoalForm from "./GoalForm";
 
 class Goalpage extends Component {
@@ -38,7 +39,7 @@ class Goalpage extends Component {
 		const stepsToCompletion = this.state.steps.map((x, i) => {
 			if(this.state.currentGoal === this.props.currentGoal){
 				return <div key={i}>
-							<div className="card blue-grey darken-1 col s5">
+							<div className="card blue-grey darken-1 col s7">
 								<div className="card-content white-text">
 									<div className="switch center-align">
 										<label>
@@ -48,10 +49,11 @@ class Goalpage extends Component {
 										    Finished
 										</label>
 									</div>
-										<span className="card-title"><li className="center-align">{x.step}</li></span>
-											<ul>
+										
+											<span className="card-title"><li className="center-align">{x.step}</li></span>
+										<ul>	
 												<li className="center-align">{x.description}</li>
-											</ul>
+										</ul>
 								</div>
 							</div>
 						</div>			

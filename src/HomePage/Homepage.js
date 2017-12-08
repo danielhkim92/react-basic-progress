@@ -66,7 +66,7 @@ class Homepage extends Component {
 					   			</div>
 					   	</div>
 					</div>
-		{this.state.goalPicked ? <Goalpage currentGoal={this.state.currentGoal} goals={this.state.goals}/> : <h1>Right now I'm false</h1>}
+		{this.state.goalPicked ? <Goalpage currentGoal={this.state.currentGoal} goals={this.state.goals}/> : <h1> </h1>}
   			</div>
   			</div>
 		)
