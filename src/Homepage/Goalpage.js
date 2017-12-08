@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import CircularProgressbar from 'react-circular-progressbar';
 import GoalForm from "./GoalForm";
 
 class Goalpage extends Component {
