@@ -47,7 +47,7 @@ class Homepage extends Component {
 	
 
 		const goalTitle = this.state.goals.map((x, i) => {
-			return <li onClick={this.showSteps} key={i} className="tab"><a onClick={this.showGoal} href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
+			return <li onClick={this.showSteps} key={i} className="tab"><a className="black-text" onClick={this.showGoal} href={`#${x.goalTitles}`}>{x.goalTitles}</a></li>})
 
 
 		return (
